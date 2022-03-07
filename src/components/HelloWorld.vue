@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-defineProps<{ msg: string }>()
+defineProps<{ msg: string }>();
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template lang="pug">
@@ -26,10 +26,16 @@ button(type='button' @click='count++') count is: {{ count }}
 p
   | Edit
   code components/HelloWorld.vue
-  |  to test hot module replacement.
+  |  to test hot module 
+  span.loud replacement.
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+span.loud {
+  color: #ff0000;
+  font-size: 40px;
+  font-weight: bold;
+}
 a {
   color: #42b983;
 }
